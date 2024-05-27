@@ -3,4 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_gray">#D3D3D3</color>
+    <color name="colorPrimary">#0A0A1B</color> <!-- Un tono oscuro que se puede usar como fondo -->
+    <color name="colorPrimaryVariant">#161627</color> <!-- Una variante más clara del color primario -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- Color para texto e iconos sobre color primario -->
+    <color name="colorSecondary">#FFCC00</color> <!-- Un color dorado para acentos -->
+    <color name="colorSecondaryVariant">#D4AF37</color> <!-- Variante del color secundario -->
+    <color name="colorOnSecondary">#0A0A1B</color> <!-- Color para texto e iconos sobre color secundario -->
+    <color name="colorBackground">#0A0A1B</color> <!-- Fondo general -->
+    <color name="colorSurface">#161627</color> <!-- Superficie de tarjetas, botones, etc. -->
+    <color name="colorOnSurface">#FFFFFF</color> <!-- Texto en superficies -->
 </resources>

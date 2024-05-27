@@ -22,18 +22,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         bottomNavigation = findViewById(R.id.meowBottomNavigation);
+
+        // Adding items to the bottom navigation
         bottomNavigation.add(new MeowBottomNavigation.Model(home, R.drawable.baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(profile, R.drawable.baseline_contacts_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(chat, R.drawable.baseline_comment_24));
 
-        bottomNavigation.setOnClickMenuListener(model -> {
-            Toast.makeText(MainActivity.this, "Item click " + model.getId(), Toast.LENGTH_SHORT).show();
-            return null;
-        });
-
+        // Setting up the listener for item click
         bottomNavigation.setOnClickMenuListener(model -> {
             switch (model.getId()) {
                 case home:
@@ -45,8 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 case chat:
                     navController.navigate(R.id.socialFragment);
                     break;
+                default:
+                    Toast.makeText(MainActivity.this, "Unknown item clicked", Toast.LENGTH_SHORT).show();
             }
             return null;
         });
+
+        // Optionally set the initial selected item
+        bottomNavigation.show(home, true);
     }
 }
