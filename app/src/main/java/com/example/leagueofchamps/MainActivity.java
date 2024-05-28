@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected final int chat = 3;
     private NavController navController;
     @SuppressLint({"MissingInflatedId", "LocalSuppress"})
-    private MeowBottomNavigation bottomNavigation;
+    static MeowBottomNavigation bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

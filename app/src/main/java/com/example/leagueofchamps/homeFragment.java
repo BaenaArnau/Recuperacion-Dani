@@ -3,6 +3,7 @@ package com.example.leagueofchamps;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +60,18 @@ public class homeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        // Encuentra la vista con la ID 'cosa'
+        View cosaView = view.findViewById(R.id.ahri);
+        cosaView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navega al otro fragmento
+                Navigation.findNavController(v).navigate(R.id.profileFragment);
+            }
+        });
+
+        return view;
     }
 }
