@@ -532,7 +532,7 @@
                         android:layout_gravity="bottom"
                         android:layout_marginLeft="80dp"
                         android:layout_marginTop="19dp"
-                        android:text="Hola que tal? Ya has aprendido a cap..."
+                        android:text="Hola que tal? Ya has aprendido a capturar?"
                         android:textColor="@color/white"
                         android:textSize="14dp"
                         app:layout_constraintBottom_toBottomOf="parent"
